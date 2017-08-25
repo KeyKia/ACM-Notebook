@@ -1,4 +1,4 @@
-/* In the Name of ALLAH */
+/* In the Name of God */
 
 #include <iostream>
 #include <algorithm>
