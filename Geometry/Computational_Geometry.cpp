@@ -5,6 +5,8 @@ struct Point { int x; int y; };
 Point p[MAXN]; //Points to be processed
 vector<Point> S; //Contains the convex hull
 
+// ------------------------------- General ---------------------------- //
+
 double signed_triangle_area (Point a, Point b, Point c) {
 	return( (a.x*b.y - a.y*b.x + a.y*c.x
 	- a.x*c.y + b.x*c.y - c.x*b.y) / 2.0 );
@@ -16,6 +18,8 @@ int orientation(Point p1, Point p2, Point p3) {
     if (val == 0) return 0;  // colinear
     return (val > 0)? 1: 2; // clock(1) or counterclockwise(2)
 }
+
+// ------------------------------- Segment Intersection ---------------------------- //
 
 // Given three colinear points p, q, r, the function checks if
 // point q lies on line segment 'pr'
@@ -45,6 +49,8 @@ bool segmentIntersect(Point p1, Point q1, Point p2, Point q2) {
  
     return false;
 }
+
+// ------------------------------- Convex Hull ---------------------------- //
 
 //Returns the square of distance
 int distSq(Point p1, Point p2) {
